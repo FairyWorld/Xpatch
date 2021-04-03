@@ -266,6 +266,9 @@ public class MainCommand extends BaseCommand {
             property.addApplicationAttribute(new AttributeItem(NodeValue.Application.NAME, PROXY_APPLICATION_NAME));
         }
 
+        property.addSDK(new ModificationProperty.SDK(0, 0, 29));
+        modifyEnabled = true;
+
         if (modifyEnabled) {
             FileProcesser.processManifestFile(filePath, dstFilePath, property);
         }
